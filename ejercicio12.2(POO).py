@@ -1,5 +1,5 @@
-#crear una clase Fraccion, que cuente con dos atributos: dividendo y divisor, que se asignan en el constructor,
-#y se imprimen como x/y en el método __str__.
+"""crear una clase Fraccion, que cuente con dos atributos: dividendo y divisor, que se asignan en el constructor,
+y se imprimen como x/y en el método __str__."""
 
 class Fraccion:
     
