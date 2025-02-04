@@ -1,0 +1,20 @@
+"""En los modelos de IA, una operación primitiva es la de predecir qué palabra es la que sigue a continuación de una palabra dada. 
+Para entrenar la IA se procesa un texto y se calculan las frecuencias de aparición de cada par de palabras."""
+
+"""Implementar la función entrenar(s) que recibe cadena de texto con palabras separadas por espacios, y devuelve un diccionario de la forma (a, b): n,
+donde la clave (a, b) y el valor n indican que la palabra b aparece inmediatamente luego de a n veces en el texto dado."""
+
+def entrenar(s):
+    diccionario = {}
+    l = s.split()
+    for i in range(len(l)-1):
+        for j in range(i + 1, i + 2): #bastaría con el primer ciclo, pero puesto que esta fue la primera solución a lapiz y papel decidí incluirla asi tal cual estaba#
+            tupla = (l[i], l[j])
+            diccionario[tupla] = diccionario.get(tupla, 0) + 1 
+
+    return diccionario
+""" 
+for i in range(len(l)-1):
+        tupla = (l[i], l[i+1])
+        diccionario[tupla] = diccionario.get(tupla, 0) + 1 
+ """
